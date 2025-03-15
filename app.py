@@ -65,6 +65,7 @@ import gradio as gr
 import google.generativeai as genai
 
 # api key for gemini
+api_key_gem = os.getenv('API_KEY')
 
 # 🔑 Configure API key
 genai.configure(api_key="api_key_gem")
