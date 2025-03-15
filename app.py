@@ -1,5 +1,3 @@
-import os
-
 # import gradio as gr
 # from transformers import pipeline
 
@@ -67,13 +65,11 @@ import gradio as gr
 import google.generativeai as genai
 
 # api key for gemini
-api_key_gem = os.getenv('API_KEY')
 
 # 🔑 Configure API key
 genai.configure(api_key="api_key_gem")
 # Load Model
 model = genai.GenerativeModel("gemini-2.0-flash")
-
 
 def extract_text_from_pdf(pdf_file):
     """Extract text from a PDF file using PyMuPDF (fitz)."""
@@ -122,5 +118,11 @@ iface = gr.Interface(
     outputs=gr.Textbox(lines=10, label="Summarized Text"),
 )
 
+
+
 # 🎬 Launch the app
-iface.launch()
+# Get the port from the environment variable
+port = int(os.environ.get('PORT', 8080))
+
+# 🎬 Launch the app
+iface.launch(server_name="0.0.0.0", server_port=port)
