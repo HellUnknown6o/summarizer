@@ -54,7 +54,7 @@ This project is a text summarization tool that uses Gradio for the user interfac
 ### Extract Text from PDF
 
 ```python
-// filepath: /home/jainil/workspace/python-projects/gradio summarizer/app.py
+
 import fitz  # PyMuPDF for PDF text extraction
 import gradio as gr
 import google.generativeai as genai
@@ -71,7 +71,6 @@ def extract_text_from_pdf(pdf_file):
 ### Chunk Text
 
 ```python
-# filepath: /home/jainil/workspace/python-projects/gradio summarizer/app.py
 # ...existing code...
 
 def chunk_text(text, chunk_size=3000):
@@ -84,7 +83,7 @@ def chunk_text(text, chunk_size=3000):
 ### Summarize Text
 
 ```python
-# filepath: /home/jainil/workspace/python-projects/gradio summarizer/app.py
+
 # ...existing code...
 
 def summarize_text(input_text, num_lines):
@@ -99,7 +98,7 @@ def summarize_text(input_text, num_lines):
 ### Process PDF
 
 ```python
-# filepath: /home/jainil/workspace/python-projects/gradio summarizer/app.py
+
 # ...existing code...
 
 def process_pdf(pdf_file, num_lines):
@@ -123,7 +122,7 @@ def process_pdf(pdf_file, num_lines):
 ### Gradio Interface
 
 ```python
-# filepath: /home/jainil/workspace/python-projects/gradio summarizer/app.py
+
 # ...existing code...
 
 iface = gr.Interface(
