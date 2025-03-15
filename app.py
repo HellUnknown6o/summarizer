@@ -16,8 +16,7 @@
 #     outputs=gr.Textbox(lines=5),  # Increase lines to fit longer text
 # )
 
-# AIzaSyCy1V0_UQOiz23hTYl41wwGlZLs6W3-XoA
-# gemini-2.0-flash
+
 
 # basic code for getting summary via created prompt from our summarizer 
 
@@ -58,9 +57,6 @@
 # # 🎬 Launch the app
 # iface.launch()
 
-# AIzaSyCy1V0_UQOiz23hTYl41wwGlZLs6W3-XoA
-# gemini-2.0-flash
-
 # code for summarizing via pdf too 
 
 
@@ -69,7 +65,7 @@ import gradio as gr
 import google.generativeai as genai
 
 # 🔑 Configure API key
-genai.configure(api_key="AIzaSyCy1V0_UQOiz23hTYl41wwGlZLs6W3-XoA")
+genai.configure(api_key="your_api_key")
 
 # Load Model
 model = genai.GenerativeModel("gemini-2.0-flash")
