@@ -59,7 +59,7 @@
 
 # code for summarizing via pdf too 
 
-
+import os
 import fitz  # PyMuPDF for PDF text extraction
 import gradio as gr
 import google.generativeai as genai
